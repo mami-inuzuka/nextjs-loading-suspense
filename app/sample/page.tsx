@@ -1,12 +1,15 @@
 import { Post } from "./_components/Post/Post";
 import { Comment } from "./_components/Comment/Comment";
+import { Suspense } from "react";
 
 export default function SamplePage() {
   return (
     <>
       <section>
         <h2>POST</h2>
-        <Post />
+        <Suspense fallback={<div>Loading Post...</div>}>
+          <Post />
+        </Suspense>
       </section>
       <section>
         <h2>COMMENT</h2>
