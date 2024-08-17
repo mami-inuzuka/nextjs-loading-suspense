@@ -13,7 +13,9 @@ export default function SamplePage() {
       </section>
       <section>
         <h2>COMMENT</h2>
-        <Comment />
+        <Suspense fallback={<div>Loading Comment...</div>}>
+          <Comment />
+        </Suspense>
       </section>
     </>
   );
